@@ -1,0 +1,110 @@
+/* Estilos de impressão aplicados por cima do github-markdown-css */
+
+@page {
+  margin: 20mm 16mm 22mm 16mm;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.markdown-body {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 24px 8px;
+  font-size: 14px;
+}
+
+/* Evita que títulos fiquem "órfãos" no fim de uma página */
+h1, h2, h3, h4, h5, h6 {
+  break-after: avoid;
+  break-inside: avoid;
+}
+
+/* Evita que blocos de código / tabelas sejam cortados ao meio */
+pre, table, .mermaid {
+  break-inside: avoid;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Sumário automático gerado pelo markdown-it-toc-done-right */
+.table-of-contents {
+  break-after: page;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 28px 32px 32px;
+  margin: 8px 0 32px;
+}
+
+.table-of-contents::before {
+  content: 'Sumário';
+  display: block;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #032D42;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4b9c49;
+}
+
+.table-of-contents ul {
+  list-style: none;
+  padding-left: 1.4em;
+  margin: 0;
+}
+
+.table-of-contents > ul {
+  padding-left: 0;
+}
+
+.table-of-contents li {
+  margin: 6px 0;
+}
+
+.table-of-contents a {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #032D42;
+  text-decoration: none;
+}
+
+.table-of-contents > li > a,
+.table-of-contents > ul > li > a {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.table-of-contents li li a {
+  font-weight: 400;
+  font-size: 13px;
+  color: #3a5a68;
+}
+
+.table-of-contents a:hover {
+  color: #4b9c49;
+}
+
+/* Diagramas Mermaid renderizados como SVG */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "mk-pdf",
+  "version": "1.0.0",
+  "description": "CLI para converter arquivos Markdown em PDFs estilizados no padrão GitHub",
+  "main": "src/cli.js",
+  "bin": {
+    "mk-pdf": "bin/mk-pdf.js"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "test": "node bin/mk-pdf.js test/sample.md -o test/output"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@fontsource/montserrat": "^5.3.0",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0",
+    "github-markdown-css": "^5.8.1",
+    "glob": "^11.0.0",
+    "highlight.js": "^11.10.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "mermaid": "^11.4.0",
+    "puppeteer": "^23.9.0"
+  }
+}
